@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Gradient */
+body:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(9, 9, 121, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+body {
+  font-family: "Staatliches", cursive;
+  text-align: center;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+}
+input {
+  padding: 5px 25px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px gray solid;
+  margin-bottom: 10px;
+}
+h1{
+    padding: 20px 0;
+}
+
+.login-container {
+  width: 70vw;
+  height: 80vh;
+  background: white;
+  margin: 10vh auto;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  place-items: center;
+}
+
+.login-img {
+  width: 100%;
+  height: auto;
+}
+
+#login-form {
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.submit-btn{
+    background: rgba(0, 212, 255, 1);
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    font-size: 20px;
+    border: 2px gray solid;
+}
+
+.error{
+    max-width: 290px;
+    text-align: start;
+    padding: 5px 0;
+    display: none;
+    color: red;
+    letter-spacing: 0.8px;
+}
+
+.error i{
+    color: red;
+}
+.register{
+    padding: 10px 0;
+    text-decoration: none;
+    color: gray;
+    transition: 1s;
+}
+
+.register:hover{
+    color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    height: 100vh;
+  }
+}
